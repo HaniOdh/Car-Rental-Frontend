@@ -34,6 +34,29 @@ export default function Nav(){
                         </button>
                     </div>
                 </div>
+
+                <div>
+                    {isMenuOpen && (
+                        <div className='md:hidden'>
+                            <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t'>
+                                <Link to={'/'} className='block px-3 py-2 text-base font-medium text-gray-700 
+                                hover:text-blue-700 transition-color duration-300' onClick={() => SetIsMenuOpen(false)}>Home</Link>
+                                <Link to={'#'} className='block px-3 py-2 text-base font-medium text-gray-700 
+                                hover:text-blue-700 transition-color duration-300' onClick={() => SetIsMenuOpen(false)}>Cars</Link>
+                                <Link to={'#'} className='block px-3 py-2 text-base font-medium text-gray-700 
+                                hover:text-blue-700 transition-color duration-300' onClick={() => SetIsMenuOpen(false)}>About</Link>
+                                <Link to={'#'} className='block px-3 py-2 text-base font-medium text-gray-700 
+                                hover:text-blue-700 transition-color duration-300' onClick={() => SetIsMenuOpen(false)}>Contact</Link>
+                            </div>
+                            <div className='flex items-center pb-5 space-x-4'>
+                                <Link to={"/login"} className='py-1 px-2 flex items-center gap-2 rounded-sm transition duration-300 
+                                hover:bg-gray-200' onClick={()=>SetIsMenuOpen(false)}> <LogIn className='h-4 w-4'/>Login</Link>
+                                <Link to={"/register"} className='rounded-sm py-1 px-3 transition duration-300 bg-blue-500 
+                                text-white hover:bg-blue-700' onClick={()=>SetIsMenuOpen(false)}>Sign Up</Link>
+                            </div>
+                        </div>
+                    )}
+                </div>
             </div>
         </nav>
     );
