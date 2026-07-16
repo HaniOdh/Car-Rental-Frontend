@@ -1,8 +1,7 @@
-
-
+import Hero from "./Hero";
 
 export default function Home(){
     return (
-        <div>App</div>
+        <Hero />
     );
 }
