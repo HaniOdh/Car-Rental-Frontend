@@ -52,6 +52,28 @@ export default function Hero(){
                         <span>Search Cars</span>
                     </button>
                 </div>
+
+                <div className='mt-16 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 text-white'>
+                    <div>
+                        <h2 className='text-3xl sm:text-4xl font-bold'>500+</h2>
+                        <p className='text-lg text-gray-200'>Premium Cars</p>
+                    </div>
+
+                    <div>
+                        <h2 className='text-3xl sm:text-4xl font-bold'>50+</h2>
+                        <p className='text-lg text-gray-200'>Locations</p>
+                    </div>
+
+                    <div>
+                        <h2 className='text-3xl sm:text-4xl font-bold'>24/7</h2>
+                        <p className='text-lg text-gray-200'>Support</p>
+                    </div>
+
+                    <div>
+                        <h2 className='text-3xl sm:text-4xl font-bold'>99%</h2>
+                        <p className='text-lg text-gray-200'>Satisfaction</p>
+                    </div>
+                </div>
         </section>
     );
 }
