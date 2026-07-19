@@ -1,5 +1,6 @@
 import Hero from "./Hero";
 import FeaturedCars from "./FeaturedCars";
+import VideoSection from "./VideoSection";
 
 
 export default function Home(){
@@ -7,6 +8,7 @@ export default function Home(){
         <main>
             <Hero />
             <FeaturedCars />
+            <VideoSection />
         </main>
     );
 }
