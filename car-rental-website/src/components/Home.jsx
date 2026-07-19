@@ -1,7 +1,12 @@
 import Hero from "./Hero";
+import FeaturedCars from "./FeaturedCars";
+
 
 export default function Home(){
     return (
-        <Hero />
+        <main>
+            <Hero />
+            <FeaturedCars />
+        </main>
     );
 }
