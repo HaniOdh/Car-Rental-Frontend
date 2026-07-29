@@ -2,6 +2,7 @@ import Hero from "./Hero";
 import FeaturedCars from "./FeaturedCars";
 import VideoSection from "./VideoSection";
 import Features from "./Features";
+import Footer from "./Footer";
 
 
 export default function Home(){
@@ -11,6 +12,7 @@ export default function Home(){
             <FeaturedCars />
             <VideoSection />
             <Features />
+            <Footer />
         </main>
     );
 }
