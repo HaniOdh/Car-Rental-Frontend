@@ -7,7 +7,7 @@ export default function VideoSection(){
     const [showVideo, setShowVideo] = useState(false)
     return(
         <section className="px-4 sm:py-20 py-16 flex justify-center items-center bg-white">
-            <div className="relative w-full max-w-7xl">
+            <div className="relative w-full max-w-7xl head-reveal">
                 <img src={videoImg} alt="BMW Cars" className="w-full sm:h-[450px] h-[300px] rounded-xl object-cover shadow-lg" />
 
                 <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10" 
