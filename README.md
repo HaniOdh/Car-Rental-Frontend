@@ -1,16 +1,74 @@
-# React + Vite
+# AutoRent - Car Rental Website Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A car rental website frontend built as a personal project to practice and improve frontend development skills with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+Note: This project is frontend-only. There is no backend, and the login/register/search forms and buttons are UI-only (they do not submit or persist data).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React 19
+- Vite 8
+- Tailwind CSS v4
+- React Router v7
+- lucide-react
+- ScrollReveal
+- ESLint
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Home page with hero section, booking search bar, and trust stats
+- Featured cars grid with ratings, specs, and daily pricing
+- Video section with a YouTube lightbox modal
+- "Why Choose AutoRent" benefits section
+- Responsive navbar with mobile hamburger menu
+- Scroll-reveal animations
+- Login and Sign-up pages (UI only)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+Prerequisites: Node.js 18+ and npm.
+
+```bash
+git clone <your-repo-url>
+cd car-rental-website
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+## Available Scripts
+
+- `npm run dev` - start the development server
+- `npm run build` - create a production build
+- `npm run preview` - preview the production build
+- `npm run lint` - run ESLint
+
+## Project Structure
+
+```text
+src/
+|-- assets/       Local images (car photos, video poster)
+|-- components/   Hero, FeaturedCars, VideoSection, Features, Nav, Footer, Layout
+|-- pages/        Login, Register
+|-- App.jsx       Router setup (/, /login, /register)
+|-- main.jsx      Entry point
+```
+
+## Routes
+
+- `/` - Home page (Hero, Featured Cars, Video, Features sections)
+- `/login` - Login page (UI only)
+- `/register` - Register page (UI only)
+
+The Cars, About, and Contact links in the navbar and footer are placeholders for now.
+
+## Roadmap
+
+- Add car listing and detail pages, a booking flow, and real form validation
+- Connect a backend/API for authentication and car inventory
+- Replace placeholder text and links
+
+## License
+
+Personal learning project - free to use, fork, and experiment with.
