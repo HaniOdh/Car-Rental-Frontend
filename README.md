@@ -29,7 +29,7 @@ Note: This project is frontend-only. There is no backend, and the login/register
 Prerequisites: Node.js 18+ and npm.
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/HaniOdh/Car-Rental-Frontend.git
 cd car-rental-website
 npm install
 npm run dev
