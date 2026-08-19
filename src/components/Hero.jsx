@@ -1,0 +1,113 @@
+import {MapPin, Calendar, Clock, Search} from 'lucide-react'
+import ScrollReveal from 'scrollreveal'
+import { useEffect } from 'react';
+
+
+export default function Hero(){
+
+    useEffect(() => {
+
+        const scrollRveal = ScrollReveal();
+        scrollRveal.reveal(".hero-reveal", {
+            distance: "50px",
+            easing: "ease-in-out",
+            duration: 1000,
+            origin: "left",
+            reset: false
+        });
+
+        scrollRveal.reveal(".head-reveal", {
+            scale: 0.85,
+            distance: "0px",
+            easing: "ease-in-out",
+            duration: 1500,
+            reset: false
+        });
+
+        scrollRveal.reveal(".reveal-y", {
+            distance: "100px",
+            easing: "ease-in-out",
+            duration: 1500,
+            origin: "bottom",
+            interval: 200,
+            reset: false
+        });
+    }, [])
+
+
+    return(
+        <section className='bg-gradient-to-br from-blue-500 to-blue-700 text-white sm:py-28 py-16 text-center px-4'>
+            <h1 className='text-4xl sm:text-5xl font-bold mb-4 hero-reveal'>Find Your Perfect <span className='text-yellow-400'>Rental Car</span></h1>
+            <p className='text-lg sm:text-xl mb-12 text-gray-200 hero-reveal'>Discover amazing deals on quiality vehicles. 
+                Book now and drive with confidence.</p>
+
+                <div className='bg-white rounded-xl shadow-lg p-4 sm:p-6 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-5 gap-4 
+                items-end text-black hero-reveal'>
+                    <div>
+                        <label htmlFor='pickupLocation' className='flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2'>
+                            <MapPin className='h-5 w-5'/>
+                            <span>Pickup Location</span>
+                        </label>
+                        <select name="pickupLocation" id="pickupLocation" className='w-full p-2 border border-gray-300 rounded cursor-pointer'>
+                            <option disabled>Select City</option>
+                            <option value="new-york">New York</option>
+                            <option value="phoenix">Phoenix</option>
+                            <option value="austin">Austin</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label htmlFor="pickupDate" className='flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2'>
+                            <Calendar className='w-5 h-5'/>
+                            <span>Pickup Date</span>
+                        </label>
+                        <input type="date" name='pickupDate' className='w-full p-2 border border-gray-300 rounded cursor-pointer'/>
+                    </div>
+
+                    <div>
+                        <label htmlFor="pickupTime" className='flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2'>
+                            <Clock className='w-5 h-5'/>
+                            <span>Pickup Time</span>
+                        </label>
+                        <input type="time" name='pickupTime' className='w-full p-2 border border-gray-300 rounded cursor-pointer'/>
+                    </div>
+
+                    <div>
+                        <label htmlFor="returnDate" className='flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2'>
+                            <Calendar className='w-5 h-5'/>
+                            <span>Return Date</span>
+                        </label>
+                        <input type="date" name='returnDate' className='w-full p-2 border border-gray-300 rounded cursor-pointer'/>
+                    </div>
+
+                    <button className='flex items-center justify-center gap-2 w-full cursor-pointer text-white p-2 rounded 
+                    bg-blue-500 hover:bg-blue-700 transition-colors duration-300'>
+                        <Search className='w-5 h-5'/>
+                        <span>Search Cars</span>
+                    </button>
+                </div>
+
+                <div className='mt-16 max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 text-white hero-reveal'>
+                    <div>
+                        <h2 className='text-3xl sm:text-4xl font-bold'>500+</h2>
+                        <p className='text-lg text-gray-200'>Premium Cars</p>
+                    </div>
+
+                    <div>
+                        <h2 className='text-3xl sm:text-4xl font-bold'>50+</h2>
+                        <p className='text-lg text-gray-200'>Locations</p>
+                    </div>
+
+                    <div>
+                        <h2 className='text-3xl sm:text-4xl font-bold'>24/7</h2>
+                        <p className='text-lg text-gray-200'>Support</p>
+                    </div>
+
+                    <div>
+                        <h2 className='text-3xl sm:text-4xl font-bold'>99%</h2>
+                        <p className='text-lg text-gray-200'>Satisfaction</p>
+                    </div>
+                </div>
+        </section>
+    );
+}
