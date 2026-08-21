@@ -4,7 +4,7 @@ import ford from '../assets/ford.jpg'
 import kia from '../assets/kia.jpg'
 import tesla from '../assets/tesla.jpg'
 import toyota from '../assets/toyota.jpg'
-import {Car, MapPin, Users, Cog, Fuel, Star, ArrowRight} from 'lucide-react'
+import {Car, ArrowRight} from 'lucide-react'
 
 import CarCard from './CarCard'
 
