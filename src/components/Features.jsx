@@ -1,4 +1,5 @@
 import {Shield, Clock4, CreditCard, MapPin, Headphones, FileBadge, Users, Zap} from 'lucide-react'
+import FeatureCard from './FeatureCard';
 
 
 const features = [
@@ -8,38 +9,38 @@ const features = [
         icon: <Shield className='w-8 h-8' />
     },
     {
-        title: "Fully Insured",
-        description: "All our vehicles come from comprehensive insurance coverage for your peace of mind",
+        title: "Flexible Hours",
+        description: "Enjoy 24/7 pickup and drop‑off options that adapt to your flight or personal schedule.",
         icon: <Clock4 className='w-8 h-8' />
     },
     {
-        title: "Fully Insured",
-        description: "All our vehicles come from comprehensive insurance coverage for your peace of mind",
+        title: "Transparent Pricing",
+        description: "No hidden fees or surprise charges – what you see is exactly what you pay.",
         icon: <CreditCard className='w-8 h-8' />
     },
     {
-        title: "Fully Insured",
-        description: "All our vehicles come from comprehensive insurance coverage for your peace of mind",
+        title: "Wide Network",
+        description: "Conveniently pick up or return your car at any of our city‑centre, airport, or suburban branches.",
         icon: <MapPin className='w-8 h-8' />
     },
     {
-        title: "Fully Insured",
-        description: "All our vehicles come from comprehensive insurance coverage for your peace of mind",
+        title: "Dedicated Support",
+        description: "Our friendly customer service team is on standby around the clock to assist with any query.",
         icon: <Headphones className='w-8 h-8' />
     },
     {
-        title: "Fully Insured",
-        description: "All our vehicles come from comprehensive insurance coverage for your peace of mind",
+        title: "Certified Quality",
+        description: "Every vehicle is rigorously inspected and professionally maintained to the highest standards.",
         icon: <FileBadge className='w-8 h-8' />
     },
     {
-        title: "Fully Insured",
-        description: "All our vehicles come from comprehensive insurance coverage for your peace of mind",
+        title: "Spacious Rides",
+        description: "Ample legroom and generous boot space for families, groups, or extra luggage needs.",
         icon: <Users className='w-8 h-8' />
     },
     {
-        title: "Fully Insured",
-        description: "All our vehicles come from comprehensive insurance coverage for your peace of mind",
+        title: "Lightning Speed",
+        description: "Enjoy a swift, paperless booking process that gets you behind the wheel in minutes.",
         icon: <Zap className='w-8 h-8' />
     }
 ]
@@ -53,13 +54,11 @@ export default function Features(){
                 and customer-first approach</p>
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
-                    {features.map((features, index)=>(
-                        <div key={index} className='flex flex-col bg-white items-center text-center border border-gray-300 
-                        rounded-lg p-6 shadow-sm hover:shadow-md transform hover:-translate-y-2 transition duration-300 reveal-y'>
-                            <div className='w-16 h-16 flex items-center justify-center rounded-full bg-blue-500 mb-4 text-white'>{features.icon}</div>
-                            <h3 className='text-lg font-semibold text-gray-800 mb-2'>{features.title}</h3>
-                            <p className='text-sm text-gray-600'>{features.description}</p>
-                        </div>
+                    {features.map((feature, index)=>(
+                        <FeatureCard
+                            key={index}
+                            feature={feature}
+                        />
                     ))}
                 </div>
             </div>
