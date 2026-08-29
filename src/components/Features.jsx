@@ -1,4 +1,5 @@
 import {Shield, Clock4, CreditCard, MapPin, Headphones, FileBadge, Users, Zap} from 'lucide-react'
+import FeatureCard from './FeatureCard';
 
 
 const features = [
@@ -53,15 +54,11 @@ export default function Features(){
                 and customer-first approach</p>
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
-                    {features.map((features, index)=>(
-                        <div key={index} className='flex flex-col bg-white items-center text-center border border-gray-300 
-                        rounded-lg p-6 shadow-sm hover:shadow-md transform hover:-translate-y-2 transition duration-300 reveal-y'>
-                            <div className='w-16 h-16 flex items-center justify-center rounded-full bg-blue-500 mb-4 text-white'>
-                                {features.icon}
-                            </div>
-                            <h3 className='text-lg font-semibold text-gray-800 mb-2'>{features.title}</h3>
-                            <p className='text-sm text-gray-600'>{features.description}</p>
-                        </div>
+                    {features.map((feature, index)=>(
+                        <FeatureCard
+                            key={index}
+                            feature={feature}
+                        />
                     ))}
                 </div>
             </div>
